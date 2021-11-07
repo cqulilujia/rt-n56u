@@ -322,7 +322,7 @@ EOF
 ### \$1 - WAN action (up/down)
 ### \$2 - WAN interface name (e.g. eth3 or ppp0)
 ### \$3 - WAN IPv4 address
-if [ \$1 == "up" ] ; then
+if [ $1 == "up" ] ; then
     ### drcom
     sleep 10 && dogcom -m dhcp -c /etc/storage/drcom.conf -e -d &
 fi
